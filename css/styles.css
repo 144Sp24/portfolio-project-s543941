@@ -1,0 +1,106 @@
+/*
+Name: Sean Coyle
+File: styles.css
+Date: 2/8/2024
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, div, img, h1, h4, ul, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rules for images */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Style rules for header */
+header {
+    background-color: #670006;
+    width: 100%;
+    float: left;
+    display: flex;
+}
+
+header img {
+    width: 25%;
+}
+
+header nav {
+    width: 75%;
+}
+
+/* Styles rules for nav */
+nav {
+    background-color: #670006;
+    float: right;
+    margin: 10em 5em 0.5em 5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav ul {
+    margin: 0;
+    text-align: right;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 1.70em;
+}
+
+nav li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+/* Style rules for main */
+main {
+    background-color: #fff;
+    clear: left;
+    padding: 2em 0 0 0;
+}
+
+main p {
+    margin-bottom: 1.5em
+}
+
+main li {
+    margin-bottom: 0.5em
+}
+
+main h4 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    float: center;
+}
+
+.gameimage {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#action, #adventure, #arcade, #shooter {
+    width: 25%;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+
+/* Style rules for footer */
+footer {
+    clear: both;
+    background-color: #670006;
+    color: white;
+}
