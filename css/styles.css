@@ -5,7 +5,7 @@ Date: 2/8/2024
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, div, img, h1, h4, ul, p {
+body, header, nav, main, footer, div, img, h1, h4, ul, p, iframe {
     margin: 0;
     padding: 0;
     border: 0;
@@ -20,29 +20,23 @@ img {
 /* Style rules for header */
 header {
     background-color: #670006;
-    width: 100%;
-    float: left;
     display: flex;
-}
-
-header img {
     width: 25%;
-}
-
-header nav {
-    width: 75%;
+    float: left;
 }
 
 /* Styles rules for nav */
 nav {
+    width: 75%;
     background-color: #670006;
-    float: right;
-    margin: 10em 5em 0.5em 5em;
+    margin-left: auto;
+    align-content: center;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 ul {
     list-style-type: none;
+    padding: 0;
 }
 
 nav ul {
@@ -63,11 +57,23 @@ nav li a {
     text-decoration: none;
 }
 
+/* Show mobile class, hide tablet-desktop class */
+.mobile {
+    display: block;
+}
+
+.tablet-desktop {
+    display: none;
+}
+
 /* Style rules for main */
 main {
     background-color: #fff;
     clear: left;
-    padding: 2em 2em 0 2em;
+    padding: 2em;
+    border-width: thick;
+    border-style: inset;
+    margin: auto;
 }
 
 main p {
@@ -81,13 +87,61 @@ main li {
 main h4 {
     margin-top: 2em;
     margin-bottom: 1em;
-    float: center;
 }
 
 .gameimage {
     margin-left: auto;
     margin-right: auto;
 }
+.map {
+    border: 2px solid #000;
+    width: 95%;
+    height: 50%;
+}
+
+/* Media Queries */
+/* Mobile-specific content */
+.mobile-content {
+  display: none;
+}
+
+/* Tablet and Desktop-specific content */
+.tablet-desktop-content {
+  display: block;
+}
+
+/* Tablet Media Query */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+  /* Hide mobile content and show tablet/desktop content */
+  .mobile-content {
+    display: none;
+  }
+  .tablet-desktop-content {
+    display: block;
+  }
+}
+
+/* Desktop Media Query */
+@media screen and (min-width: 1025px) {
+  .container {
+    width: 80%;
+  }
+  /* Show mobile content and hide tablet/desktop content */
+  .mobile-content {
+    display: none;
+  }
+  .tablet-desktop-content {
+    display: block;
+  }
+  /* Example of using a dynamic pseudo-class */
+  .container:hover {
+    background-color: #ddd; /* Change background color on hover */
+  }
+}
+
 
 #action, #adventure, #arcade, #shooter {
     width: 25%;
